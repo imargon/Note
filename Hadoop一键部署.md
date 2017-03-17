@@ -8,10 +8,9 @@ hadoop+spark+hive 安装教程
 2.在etc/profile,中分别添加路径   
 
 
-
-
 1.hadoop+spark参考教程：http://www.cnblogs.com/bovenson/p/5760856.html
-
+ 重新设置SSH 密码，然后赋权限。1.查看ssh 服务是否启动，service sshd start 。2.设置ssh密码，赋权限，以root用户启动Hadoop
+ 
 2.hive安装教程
 2.1 安装mysql
 	sudo apt-get -y install mysql*，并设置密码
@@ -73,8 +72,6 @@ hadoop+spark+hive 安装教程
 	  <description></description>
 	</property>
 
-
-
 7.在hive下创建临时IO的tmp文件夹。然后将路径配置到hive-site.xml的下列参数中
      
     mkdir /usr/local/hive/iotmp
@@ -101,4 +98,7 @@ hadoop+spark+hive 安装教程
 	export JAVA_HOME=/usr/local/jvm/jdk
 	export HADOOP_HOME=/usr/local/hadoop
 	export HIVE_HOME=/usr/local/hive
+	
 9.下载mysql-connector-java-5.1.27-bin.jar文件，并放到$HIVE_HOME/lib目录下
+10.初始化Hive 数据库脚本
+11.以root 用户启动Hive
