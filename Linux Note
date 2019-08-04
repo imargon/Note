@@ -1,0 +1,9 @@
+一.查看开机启动
+1：systemctl list-unit-files --type=service 
+2：systemctl list-unit-files --type=service | grep enabled
+3：systemctl list-unit-files --type=service | grep disabled
+
+开机启动/停止服务
+ 1：sudo systemctl stop vsftpd.service
+ 2：sudo systemctl disable vsftpd.service
+ 3: sudo systemctl enable vsffpd.service
