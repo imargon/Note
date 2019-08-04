@@ -1,0 +1,57 @@
+git config --global user.name "imargon" //给自己起个用户名
+git config --global user.email  "xxx@gmail.com " //填写自己的邮箱
+ssh-keygen -t rsa -C "xxx@gmail.com"
+ssh -T git@github.com
+
+git clone git_url
+git add . // 要add的文件，. 表示添加所有
+git commit -m 'add files' // 提交更新
+git push origin master  // push到远端master上
+
+# 删除缓存
+git rm -r --cached .
+git add .
+Git commit -m 'update .gitignore'
+
+1. create a new repository on the command line
+
+echo "# gittest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/imargon/gittest.git
+git push -u origin master
+
+2.push an existing repository from the command line
+
+git remote add origin https://github.com/imargon/gittest.git
+git push -u origin master
+错误提示：fatal: remote origin already exists.
+解决办法：
+git remote rm origin
+
+错误提示:hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+解决办法：
+git pull https://github.com/imargon/gittest.git
+git push https://github.com/imargon/gittest.git
+
+git status
+
+
+
+3.
+在Git Shell下输入命令测试公钥是否认证正确。
+ssh -T git@github.com
+
+参考：
+#:https://www.cnblogs.com/zlxbky/p/7727895.html
+#:http://lazynight.me/2898.html
+#:http://www.cnblogs.com/tugenhua0707/p/4050072.html
+#:http://1ke.co/course/194
+#:http://blog.csdn.net/dengjianqiang2011/article/details/9260435
+#:https://segmentfault.com/a/1190000004317077
