@@ -1,1 +1,1 @@
-# SqlNote
+# Day Note
