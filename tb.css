@@ -25,3 +25,9 @@
 /*所有分类文字颜色*/
 
 .skin-box-bd .all-cats .title{color:#ff0000}
+
+/*demo*/
+.skin-box-bd .menu-list{background:none repeat scroll 0 0 #CF2440;}
+.skin-box-bd .link{background:#C21F30;}
+.all-cats .link{background:none repeat scroll 0 0 #CF2440;}
+.menu-list .menu{border-color:#FFFFFF;}
