@@ -1,1 +1,27 @@
-.menu{}
+/* 导航条背景色*/
+
+.skin-box-bd .menu-list{background: none repeat scroll 0 0 #00ad08;}
+
+/*首页/店铺动态背景色*/
+
+.skin-box-bd .menu-list .link{background: none repeat scroll 0 0 #00ad08;}
+
+/*首页/店铺动态右边线*/
+
+.skin-box-bd .menu-list .menu{border-right:1px #006205 solid;}
+
+/*首页/店铺动态文字颜色*/
+
+.skin-box-bd .menu-list .menu .title{color:#ff0000}
+
+/*所有分类背景色*/
+
+.all-cats .link{background: none repeat scroll 0 0 #00ad08;}
+
+/*所有分类右边线*/
+
+.all-cats .link{border-right:1px #006205 solid;}
+
+/*所有分类文字颜色*/
+
+.skin-box-bd .all-cats .title{color:#ff0000}
