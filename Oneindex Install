@@ -3,3 +3,27 @@ Bt-Panel: http://183.95.197.5:8888/821e1522
 username: abq76qep
 password: 1920749c
 http://127.0.0.1:8888/821e1522
+OS:Fedora31
+1.安装docker
+#https://www.cnblogs.com/jackadam/p/12077238.html
+
+2.docker pull
+docker pull yinaoxiong/oneindex
+#创建临时容器：
+docker run -itd --name=tmp yinaoxiong/oneindex
+#拷贝容器内文件到宿主机目录：
+docker cp tmp:/var/www/html /opt/oneindex
+docker rm -f tmp
+#正式启动服务：
+docker run -d -p 8181:80 -v /opt/oneindex:/var/www/html --restart=always yinaoxiong/oneindex
+
+3.url替换
+前面有提示会通过ju.tn进行中转的会出现无法访问的现象,这时只要将网址中的 https://ju.tn/换成 https://oneindex.github.io/
+4.最后打开网址进行绑定OneDrive了，网站的后台地址：http://xx.com/?/admin ，默认密码：oneindex。
+
+
+参考：
+1.https://51.ruyo.net/10272.html
+2.https://www.b2fun.net/archives/192
+3.https://hub.docker.com/r/yinaoxiong/oneindex
+4.https://hub.docker.com/r/quchaonet/oneindex
