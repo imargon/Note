@@ -1,2 +1,4 @@
 root/Syhbc123+
 zhen/Zhen1239+
+load data local infile 'd:\\mysql_data\\t1.txt' into table t1;
+show global varaiables like 'local_infile';
