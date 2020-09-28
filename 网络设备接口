@@ -1,5 +1,4 @@
 交换机路由器G口、F口、E口、S口区别:
-交换机、路由器之前学过，也做过这方面的工作，但是说实话，学得不深。最近打算重新学习，从最基础的开始。
 
 S口
 　　Serial接口的意思，也叫高速异步串口，主要是连接广域网的V.35线缆用的，说白了就是路由器和路由器连接时候用的，可以用命令设置带宽，一般也就在10M、8M左右。
@@ -20,7 +19,6 @@ G口
 
 interface Bridge-Aggregation:创建或者进入链路聚合接口视窗
 interface Ten-GigabitEthernet:进入万兆口
-
 
 display interface brief 
 dis interface Ten-GigabitEthernet  1/1/4
