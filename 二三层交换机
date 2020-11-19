@@ -1,0 +1,52 @@
+主要区别：二层交换机bai工作在数据链路层，三层交换机工作在网络层，路由器工作在网络层。
+三层交换（也称多层交换技术，或IP交换技术）是相对于传统交换概念而提出的。
+众所周知，传统的交换技术是在OSI网络标准模型中的第二层——数据链路层进行*作的，而三层交换技术是在网络模型中的第三层实现了数据包的高速转发。
+简单地说，三层交换技术就是：二层交换技术＋三层转发技术。
+二层交换机根据MAC进行数据转发，三层交换机根据IP地址进行转发；二层交换机仅可以设置一个vlan,三层可以设置多个vlan,每个vlan可以独立设置IP且可以互通。
+
+三层交换机划分3个vlan，分别是192.168.1、2、3段。
+
+<H3C>sys
+vlan 10：创建vlan并进入，加入1~8
+[H3C]vlan 10  
+[H3C-vlan10]port e1/0/1 to e1/0/8
+[H3C-vlan10]q
+
+创建vlan 20，加入9~16
+[H3C]vlan 20
+[H3C-vlan20]port e1/0/9 to e1/0/16
+[H3C-vlan20]q
+
+创建vlan 30，加入17~24
+[H3C]vlan 30
+[H3C-vlan30]port e1/0/17 to e1/0/24
+[H3C-vlan30]q
+
+显示有哪些vlan
+[H3C]dis vlan
+Total 4 VLAN exist(s).
+The following VLANs exist:
+  1(default), 10, 20, 30,
+
+
+每个VLAN分别添加IP、子网掩码：
+[H3C]int vlan 10
+[H3C-Vlan-interface10]ip addr 192.168.1.254 255.255.255.0
+[H3C-Vlan-interface10]quit
+
+[H3C]int vlan 20
+[H3C-Vlan-interface20]ip addr 192.168.2.254 255.255.255.0
+[H3C-Vlan-interface20]quit
+
+[H3C]int vlan 30                       
+[H3C-Vlan-interface30]ip addr 192.168.3.254 255.255.255.0
+[H3C-Vlan-interface30]quit                              
+[H3C]
+
+这里添加的vlan的IP，结合后面的验证，是接入设备的网关地址。
+
+在接入vlan的设备上设置好IP和网关，信息如下：
+PC1:192.168.2.18 255.255.255.0 192.168.2.254
+PC2:192.168.3.18 255.255.255.0 192.168.3.254
+PC3:192.168.4.18 255.255.255.0 192.168.4.254
+三台PC互相可以ping通，就说明是三层交换机
