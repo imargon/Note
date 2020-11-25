@@ -1,0 +1,11 @@
+什么是CDC类 （Communication Device Class）
+
+对于最终用户而言，有了通用串行总线 （UniversalSerial Bus，USB），把外部设备连接到个人计算机上，已经变得非常简单，几乎不再需要过去必不可少的大量连接线。 RS-232 串行 COM 端口便是不再需要的连接
+之一，它已经越来越罕见。事实上，由于很多时髦的笔记本电脑已经不再配备 RS-232 串行 COM 端口，因此对于那些需要从外部设备到主机 PC 的串行通信通道的开发人员而言，这可能是一个挑战。
+幸运的是，设备可以使用 USB 通信设备类（Communication Device Class，CDC），它使得用户能够充分利用USB的简单性，同时还提供COM端口功能。CDC 是通信设备连接 USB 的接口。尽管旨在用于诸如调制解调器这样的设备以及网络接口，CDC 的功能子集也可以用来仿真串行端口，从而提供“虚拟的”UART。
+USB 的总体灵活性和功能，需要用于设备标识、配置、控制和数据传输的管理协议。Microchip PIC32 CDC 串行驱动程。
+
+　　USB的CDC类是USB通信设备类 （Communication Device Class）的简称。CDC类是USB组织定义的一类专门给各种通信设备（电信通信设备和中速网络通信设备）使用的USB子类。
+根据CDC类所针对通信设 备的不同，CDC类又被分成以下不同的模型：USB传统纯电话业务（POTS）模型，USB ISDN模型和USB网络模型。
+其中，USB传统纯电话业务模型，有可分为直接线控制模型（Direct Line Control Model）、抽象控制模型（Abstract Control Model）和USB电话模型（USB Telephone Model）
+  
